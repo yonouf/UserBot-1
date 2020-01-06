@@ -68,8 +68,6 @@ RUN python3 -m ensurepip \
 # Clone repo and prepare working directory
 #
 RUN git clone -b master https://github.com/BL4CKID/UserBot /root/userbot
-# RUN git clone -b master https://github.com/BL4CKID/UserBot --token AN53VNGSXVQUWFNNGESSLGK6CGUKM /root/userbot
-# ./config.sh --url https://github.com/BL4CKID/UserBot --token AN53VNGSXVQUWFNNGESSLGK6CGUKM
 RUN mkdir /root/userbot/bin/
 WORKDIR /root/userbot/
 
