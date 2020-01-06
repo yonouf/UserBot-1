@@ -43,7 +43,7 @@ async def telegraphs(graph):
                     end = datetime.now()
                     ms_two = (end - start).seconds
                     os.remove(downloaded_file_name)
-                    await graph.edit("This [Files](https://telegra.ph{}) Uploaded in {} seconds.".format(media_urls[0], (ms + ms_two)), link_preview=False)
+                    await graph.edit("This [Files](https://telegra.ph{}) Uploaded in {} seconds.".format(media_urls[0], (ms + ms_two)), link_preview=True)
             elif input_str == "t":
                 user_object = await bot.get_entity(r_message.from_id)
                 title_of_page = user_object.first_name # + " " + user_object.last_name
@@ -69,7 +69,7 @@ async def telegraphs(graph):
                 )
                 end = datetime.now()
                 ms = (end - start).seconds
-                await graph.edit("Telegraph [LINK](https://telegra.ph/{}) completed in {} seconds.".format(response["path"], ms), link_preview=False)
+                await graph.edit("Telegraph [LINK](https://telegra.ph/{}) completed in {} seconds.".format(response["path"], ms), link_preview=True)
         else:
             await graph.edit("Reply to a message to get a permanent telegra.ph link.")
 
